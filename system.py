@@ -110,12 +110,12 @@ def predict():
 
 @app.route("/result")
 def result():
-    try:
-        result,ir=prediction(data)
-        per_day=(data["loan_amount"]*(1.0+(ir/100)))/float(data["loan_amount_term"])
-        return render_template("result.html", result=round(result,4),intrest_rate=round(ir,2),per_day=round(per_day,2))
-    except:
-        return redirect(url_for("predict"))
+    # try:
+    result,ir=prediction(data)
+    per_day=(data["loan_amount"]*(1.0+(ir/100)))/float(data["loan_amount_term"])
+    return render_template("result.html", result=round(result,4),intrest_rate=round(ir,2),per_day=round(per_day,2))
+    # except:
+    #     return redirect(url_for("predict"))
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=5000,debug=True)
