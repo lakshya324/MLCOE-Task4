@@ -7,6 +7,41 @@
 {% block content %}
   <div class="wrapper">
     <h1>Home Page</h1>
+
+    <p>Here are some images of the data we have collected and analyzed.</p>
+
+    <img src="{{ url_for('static', filename = 'kmean/Clusters.png') }}" alt="Clusters Between Users" width="1000" height="1000" />
+    <img src="{{ url_for('static', filename = 'kmean/Clusters_Yes.png') }}" alt="Clusters Between Users Who Get Loan" width="1000" height="1000" />
+
+    <p>Here Are Mean/Frequent Values of Users who get Loan per Clusters</p>
+
+    <div>
+      <table>
+        <tr>
+          <th>Clusters</th>
+          <th>Gender (Male %)</th>
+          <th>Married</th>
+          <th>None Dependences %</th>
+          <th>Graduated (Education)</th>
+          <th>Self Employed</th>
+          <th>Mean Income</th>
+          <th>Mean Co-Income</th>
+          <th>Mean Loan Amount</th>
+          <th>Mean Loan Term</th>
+          <th>Credit History (Yes %)</th>
+          <th>Most Frequent Property Area</th>
+        </tr>
+
+        {% for row in list %}
+          <tr>
+            {% for value in row %}
+              <td>{{ value }}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+
     <a href="{{ url_for('login') }}"><button>login</button></a>
   </div>
 {% endblock %}

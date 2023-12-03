@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Result Page
+{% endblock %}
+
+{% block content %}
+    <h1>Result Page</h1>
+    {% if result*100 >=35 %}
+    <p style="color:green;">Result:{{ result*100 }}%</p>
+    {% else %}
+    <p style="color:red;">Result:{{ result*100 }}%</p>
+    {% endif %}
+    <br>
+    <p>At Intrest Rate of {{ intrest_rate }}%</p>
+    <p>Rs. {{ per_day }} per Day</p>
+    <br>
+    <p>Want to try again?
+    <a href="{{ url_for('predict') }}">Predict</a>
+    </p>
+    <br>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+{% endblock %}
