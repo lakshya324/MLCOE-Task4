@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Loan Prediction Form
+{% endblock %}
+
+{% block content %}
+  <div>
+    <h1>Loan Prediction Form</h1>
+
+    <form method="post" action="{{ url_for('predict') }}">
+      {{ form.hidden_tag() }}
+
+      <div>
+        {{ form.name(placeholder = 'Full Name') }}
+        {% for error in form.name.errors %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
+
+      <div>{{ form.gender.label }} {{ form.gender() }}</div>
+
+      <div>{{ form.income(placeholder='Income') }}</div>
+      
+      <div>{{ form.co_applicant_income(placeholder = 'Co-Applicant Income') }}</div>
+      
+      <div>{{ form.loan_amount(placeholder = 'Loan Amount') }}</div>
+      
+      <div>{{ form.loan_amount_term.label }} {{ form.loan_amount_term() }}</div>
+      
+      <div>{{ form.credit_history.label }} {{ form.credit_history() }}</div>
+      
+      <div>{{ form.dependents.label }} {{ form.dependents() }}</div>
+      
+      <div>{{ form.education.label }} {{ form.education() }}</div>
+      
+      <div>{{ form.self_employed() }} {{ form.self_employed.label }} </div>
+      
+      <div>{{ form.married() }} {{ form.married.label }} </div>
+      
+      <div>{{ form.property_area.label }} {{ form.property_area() }}</div>
+
+      <button type="submit">Predict</button>
+    </form>
+  </div>
+{% endblock %}

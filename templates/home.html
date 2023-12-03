@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Home Page
+{% endblock %}
+
+{% block content %}
+  <div class="wrapper">
+    <h1>Home Page</h1>
+    <a href="{{ url_for('login') }}"><button>login</button></a>
+  </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Index Page
+{% endblock %}
+
+{% block content %}
+  <div class="wrapper">
+    <h1>Welcome</h1>
+    <a href="{{ url_for('predict') }}"><button>Calculate your loan now!</button></a>
+    <a href="{{ url_for('login') }}"><button>login</button></a>
+  </div>
+{% endblock %}
