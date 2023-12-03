@@ -3,4 +3,5 @@ Flask-SQLAlchemy
 Werkzeug
 flask-wtf
 email_validator
+gunicorn
 WTForms
