@@ -5,3 +5,4 @@ flask-wtf
 email_validator
 gunicorn
 WTForms
+scikit-learn
