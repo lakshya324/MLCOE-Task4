@@ -8,6 +8,7 @@ from flask import (
 from flask_sqlalchemy import SQLAlchemy
 import datetime
 import os
+import numpy as np
 from form import LoginForm, PredictForm
 import pickle
 
