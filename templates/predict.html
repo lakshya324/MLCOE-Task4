@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  Loan Prediction Form
+  Home Loan Prediction
 {% endblock %}
 
 {% block content %}
   <div>
-    <h1>Loan Prediction Form</h1>
+    <h1>Home Loan Prediction Form</h1>
 
     <form method="post" action="{{ url_for('predict') }}">
       {{ form.hidden_tag() }}

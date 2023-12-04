@@ -20,7 +20,7 @@ db = SQLAlchemy(app)
 global_user = None
 remember_me = False
 data = None
-base_intrest_rate=15
+base_intrest_rate=10
 plot_list = [
     [0,81.78, 65.43, 59.85, 75.46, 10.78, 313971.9, 123059.91, 10470.76, 360, 84.94, 1],
     [1,100.0, 85.71, 28.57, 100.0, 14.29, 3963554.29, 54285.71, 30651.43, 360, 71.43, 1],
