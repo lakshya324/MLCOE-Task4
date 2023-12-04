@@ -42,7 +42,7 @@ class admin(db.Model):
 def prediction(data):
     global base_intrest_rate
     
-    with open(".\instance\svm\svm_predict.pkl", "rb") as file:
+    with open("svm_predict.pkl", "rb") as file:
         svm = pickle.load(file)
         model = svm["model"]
         scaler = svm["scaler"]
