@@ -22,28 +22,28 @@ class LoginForm(FlaskForm):
             ),
         ],
     )
-    password = PasswordField("Password", [validators.DataRequired()])
+    password = PasswordField("Password", [validators.DataRequired(message='This Value Cant be Null')])
     remember = BooleanField("Remember Me")
     submit = SubmitField("Login")
 
 
 class PredictForm(FlaskForm):
-    name = StringField("Name", validators=[validators.DataRequired()])
+    name = StringField("Name", validators=[validators.DataRequired(message='This Value Cant be Null')])
     gender = RadioField(
         "Gender",
         choices=[(0, "Female"), (1, "Male")],
         validators=[validators.InputRequired()],
     )
     income = IntegerField(
-        "Income", validators=[validators.NumberRange(min=1,message='Value Must be greater then 0')]
+        "Income", validators=[validators.DataRequired(message='This Value Cant be Null'),validators.NumberRange(min=1,message='Value Must be greater then 0')]
     )
     co_applicant_income = IntegerField(
         "Co-Applicant Income",
-        validators=[validators.NumberRange(min=1,message='Value Must be greater then 0')],
+        validators=[validators.DataRequired(message='This Value Cant be Null'),validators.NumberRange(min=1,message='Value Must be greater then 0')],
     )
     loan_amount = IntegerField(
         "Loan Amount",
-        validators=[validators.NumberRange(min=1, max=56000,message='Value Must be greater then 0 and less than 56000')],
+        validators=[validators.DataRequired(message='This Value Cant be Null'),validators.NumberRange(min=1, max=56000,message='Value Must be greater then 0 and less than 56000')],
     )
     loan_amount_term = SelectField(
         "Loan Amount Term",
