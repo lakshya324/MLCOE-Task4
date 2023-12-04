@@ -35,15 +35,15 @@ class PredictForm(FlaskForm):
         validators=[validators.InputRequired()],
     )
     income = IntegerField(
-        "Income", validators=[validators.DataRequired(), validators.NumberRange(min=0)]
+        "Income", validators=[validators.NumberRange(min=1,message='Value Must be greater then 0')]
     )
     co_applicant_income = IntegerField(
         "Co-Applicant Income",
-        validators=[validators.DataRequired(), validators.NumberRange(min=0)],
+        validators=[validators.NumberRange(min=1,message='Value Must be greater then 0')],
     )
     loan_amount = IntegerField(
         "Loan Amount",
-        validators=[validators.DataRequired(), validators.NumberRange(min=0, max=56000)],
+        validators=[validators.NumberRange(min=1, max=56000,message='Value Must be greater then 0 and less than 56000')],
     )
     loan_amount_term = SelectField(
         "Loan Amount Term",

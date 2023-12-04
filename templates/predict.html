@@ -18,27 +18,71 @@
         {% endfor %}
       </div>
 
-      <div>{{ form.gender.label }} {{ form.gender() }}</div>
+      <div>{{ form.gender.label }} {{ form.gender() }}
+        {% for error in form.name.gender %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
 
-      <div>{{ form.income(placeholder='Income') }}</div>
+      <div>{{ form.income(placeholder='Income') }}
+        {% for error in form.name.income %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
       
-      <div>{{ form.co_applicant_income(placeholder = 'Co-Applicant Income') }}</div>
+      <div>{{ form.co_applicant_income(placeholder = 'Co-Applicant Income') }}
+        {% for error in form.name.co_applicant_income %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
       
-      <div>{{ form.loan_amount(placeholder = 'Loan Amount') }}</div>
+      <div>{{ form.loan_amount(placeholder = 'Loan Amount') }}
+        {% for error in form.name.loan_amount %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
       
-      <div>{{ form.loan_amount_term.label }} {{ form.loan_amount_term() }}</div>
+      <div>{{ form.loan_amount_term.label }} {{ form.loan_amount_term() }}
+        {% for error in form.name.loan_amount_term %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
       
-      <div>{{ form.credit_history.label }} {{ form.credit_history() }}</div>
+      <div>{{ form.credit_history.label }} {{ form.credit_history() }}
+        {% for error in form.name.credit_history %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
       
-      <div>{{ form.dependents.label }} {{ form.dependents() }}</div>
+      <div>{{ form.dependents.label }} {{ form.dependents() }}
+        {% for error in form.name.dependents %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
       
-      <div>{{ form.education.label }} {{ form.education() }}</div>
+      <div>{{ form.education.label }} {{ form.education() }}
+        {% for error in form.name.education %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
       
-      <div>{{ form.self_employed() }} {{ form.self_employed.label }} </div>
+      <div>{{ form.self_employed() }} {{ form.self_employed.label }}
+        {% for error in form.name.self_employed %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
       
-      <div>{{ form.married() }} {{ form.married.label }} </div>
+      <div>{{ form.married() }} {{ form.married.label }}
+        {% for error in form.name.married %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
       
-      <div>{{ form.property_area.label }} {{ form.property_area() }}</div>
+      <div>{{ form.property_area.label }} {{ form.property_area() }}
+        {% for error in form.name.property_area %}
+          <p>{{ error }}</p>
+        {% endfor %}
+      </div>
 
       <button type="submit">Predict</button>
     </form>
