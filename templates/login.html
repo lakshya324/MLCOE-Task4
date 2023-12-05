@@ -9,6 +9,7 @@
     <h1>Login Page</h1>
     <form method="POST" action="/login">
       {{ form.hidden_tag() }}
+      <br>
 
       <div class="input-box">
         <img src="{{ url_for('static', filename = 'css/images/user.png') }}" />
@@ -17,7 +18,7 @@
           <p class="error-message">{{ error }}</p>
         {% endfor %}
       </div>
-
+      
       <div class="input-box">
         <img src="{{ url_for('static', filename = 'css/images/mail.png') }}" />
         {{ form.email(placeholder = 'Email') }}
@@ -25,7 +26,7 @@
           <p class="error-message">{{ error }}</p>
         {% endfor %}
       </div>
-
+         
       <div class="input-box">
         <img src="{{ url_for('static', filename = 'css/images/lock.png') }}" />
         {{ form.password(placeholder = 'Password') }}
@@ -33,7 +34,7 @@
           <p class="error-message">{{ error }}</p>
         {% endfor %}
       </div>
-
+       <br>
       <div class="remember-forgot">
         <label>
           {{ form.remember() }}
@@ -41,7 +42,7 @@
         </label>
 
       </div>
-
+      <br>
       <button type="submit" class="btn">Login</button>
     </form>
   </div>

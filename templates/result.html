@@ -5,19 +5,25 @@
 {% endblock %}
 
 {% block content %}
+     <div class="wrapper">
     <h1>Result Page</h1>
+    <br>
+
+
+
     {% if result*100 >=35 %}
-    <p style="color:green;">Result:{{ result*100 }}%</p>
+    <h2 style="color:green;">Result:{{ result*100 }}%</h2>
     {% else %}
-    <p style="color:red;">Result:{{ result*100 }}%</p>
+    <h2 style="color:red;">Result:{{ result*100 }}%</h2>
     {% endif %}
     <br>
     <p>At Intrest Rate of {{ intrest_rate }}% per Annum</p>
     <p>Rs. {{ per_day }} per Day</p>
     <br>
     <p>Want to try again?
-    <a href="{{ url_for('predict') }}">Predict</a>
+    <a href="{{ url_for('predict') }}" style="color:lightblue ;">Predict</a>
     </p>
     <br>
-    <a href="{{ url_for('index') }}">Back to Home</a>
+    <a href="{{ url_for('index') }}" style="color: lightblue;">Back to Home</a>
+</div>
 {% endblock %}

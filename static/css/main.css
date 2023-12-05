@@ -1,0 +1,122 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins",sans-serif;
+}
+body {
+    background: url('images/img.jpg') no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(104, 62, 62);
+  background-size: cover;
+  background-position: center;
+}
+.wrapper{
+    font-weight: bold;
+    text-align: center;
+    width: 920px;
+    min-height: 50vh;
+    background: transparent;
+    border: 2px solid rgba(241, 234, 234, 0.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #080808;
+    border-radius: 10px;
+    padding: 10px 30px;
+  }
+  
+
+
+
+table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    
+    border: 1px solid #ddd;
+    padding: 8px;
+    
+}
+
+button {
+    background: transparent;
+    background-color: #090a09;
+    color: rgb(239, 231, 231);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: 0.8s;
+    text-transform: uppercase;
+}
+.h2 {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255,255,255,.2);
+    width:620px ;
+    font-weight: bold;
+    color: #070606;
+    border-radius: 10px;
+    padding: 10px 30px;
+    text-decoration: underline;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(20, 19, 19, 0.1);
+}
+.h3{
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255,255,255,.2);
+    width:420px ;
+    font-weight: bold;
+    color: #e8dfdf;
+    border-radius: 10px;
+    padding: 10px 30px;
+    text-decoration: underline;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(20, 19, 19, 0.1);
+}
+.h5{
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255,255,255,.2);
+    width:620px ;
+    font-weight: bold;
+    color: #070606;
+    border-radius: 10px;
+    padding: 10px 30px;
+   
+  
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(20, 19, 19, 0.1);
+    font-size: 30px;
+    
+    
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    
+}
+.h4{
+    text-align: center;
+    font-size:25px ;
+    font-weight: bold;
+    
+}

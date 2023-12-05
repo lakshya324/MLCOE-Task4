@@ -7,7 +7,13 @@
 {% block content %}
   <div class="wrapper">
     <h1>Welcome</h1>
-    <a href="{{ url_for('predict') }}"><button>Calculate your loan now!</button></a>
-    <a href="{{ url_for('login') }}"><button>login</button></a>
+    
+    <br>
+    <a href="{{ url_for('predict') }}"><button class="btn">Calculate your loan now!</button></a>
+ 
+    <br>
+    <br>
+    
+    <a href="{{ url_for('login') }}"><button class="btn"> login</button></a>
   </div>
 {% endblock %}

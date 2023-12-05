@@ -30,8 +30,7 @@ class LoginForm(FlaskForm):
 class PredictForm(FlaskForm):
     name = StringField("Name", validators=[validators.DataRequired(message='This Value Cant be Null')])
     gender = RadioField(
-        "Gender",
-        choices=[(0, "Female"), (1, "Male")],
+        "Gender", choices=[(0, "Female"), (1, "Male")],
         validators=[validators.InputRequired()],
     )
     income = IntegerField(
